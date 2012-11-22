@@ -1,0 +1,755 @@
+@import normalize
+@import boiler
+@import compass/css3
+@import compass/utilities
+
+
+////////////////////////
+//put yor styles here
+$web-black: #333333
+$context-blue: #00ADE2
+$context-green: #00DD69
+$context-green-blue: #00cc95
+$context-blue-green: #00bdba
+$context-red: #ff2c4a
+
+$sans: Helvetica-Neau, sans-serif
+$serif: "Georgia",Times New Roman,Times, serif
+
+//////////////////////////////////////////////////////////
+// header
+
+body
+  font-family: $sans
+
+a
+  text-decoration: none
+  color: $web-black
+
+img
+  max-width: 100%
+
+h1
+  line-height: 60px
+  font-weight: normal
+  font-size: 56px
+  font-family: $serif
+  padding-bottom: 5px
+
+h2
+  line-height: 33px
+  font-weight: normal
+  font-size: 30px
+  font-family: $serif
+  display: block
+  color: $context-blue
+  font-style: italic
+
+.site-header
+  text-align: center
+  height: 60px
+  margin-bottom: 0px
+  position: relative
+  padding: 2px 0 0 0
+  z-index: 2
+  +background-image(linear-gradient(left, $context-blue, $context-green))
+
+.context-logo
+  width: 167px
+  margin: 0 auto
+  display: block
+
+  h1
+    background: url(../img/context-logo.png)
+    width: 167px
+    height: 87px
+    position: relative
+    z-index: 20
+    padding: 0
+
+  &:hover h1
+    margin-top: 5px
+
+.mobile-navicon
+  width: 30px
+  position: absolute
+  top: 8px
+  left: 12px
+  height: 36px
+
+  li
+    width: 30px
+    height: 4px
+    margin-top: 5px
+    background: #000
+    +transition(background .15s linear)
+
+  &:hover
+    cursor: pointer
+
+    li
+      background: $context-red
+
+.main-nav
+  position: absolute
+  top: 0
+  width: 100%
+
+
+  a
+    width: 100%
+    padding: 10px 10px
+    +box-sizing(border-box)
+    text-transform: uppercase
+    text-align: left
+    font-weight: bold
+    border-bottom: 1px solid $web-black
+    display: block
+
+    &:hover
+      background: $context-red
+      color: #000
+
+header
+  +transition(margin-top .15s linear)
+
+  &.nav-slide
+    margin-top: 129px
+
+.shadow
+  width: 100%
+  height: 17px
+  background: rgba(0,0,0,.1)
+  position: absolute
+  bottom: 0
+  z-index: 1
+
+//////////////////////////////////////////////////////////
+// front page
+
+.featured-articles, .all-articles
+  background: #fff
+  position: relative
+
+  li > a
+    display: block
+    +box-sizing(border-box)
+    +transition(background .15s linear, color .15s linear)
+    height: 100%
+
+
+    &:hover
+      background: $context-red
+      color: #000
+
+      .date, h2
+        color: #000
+
+  .text
+    padding: 10px 20px
+    width: 100%
+    +box-sizing(border-box)
+
+  h1, h2, p
+    padding-bottom: 5px
+    text-align: center
+
+  h1
+    line-height: 33px
+    font-weight: normal
+    font-size: 30px
+    font-family: $serif
+    padding-bottom: 5px
+
+  h2
+    font-size: 16px
+    line-height: 21px
+    font-weight: normal
+    font-style: normal
+    padding: 0 0 5px 0
+    margin: 0
+    color: $web-black
+    font-family: $sans
+
+  .date
+    text-transform: uppercase
+    font-size: 10px
+    font-weight: bold
+    letter-spacing: 3px
+    color: #888
+    +transition(color .15s linear)
+
+  img
+    padding: 10px
+    +box-sizing(border-box)
+
+
+///////////////////////////////////////////////////////////////////////////
+// footer
+
+.footer-link
+  display: block
+  margin: 0 auto 20px
+  width: 167px
+  +opacity(.5)
+  +transition(opacity .2s linear)
+
+  div
+    background: url(../img/context-logo.png)
+    width: 167px
+    height: 87px
+    text-align: center
+    margin: 0px auto 0
+    position: relative
+    z-index: 20
+
+  &:hover
+    +opacity(1)
+
+
+///////////////////////////////////////////////////////////////////////////
+// about page
+
+.header
+  padding: 50px 40px 20px
+
+///////////////////////////////////////////////////////////////////////////
+// all articles
+
+.all-articles
+  max-width: 1000px
+  margin: 0 auto 30px
+  position: relative
+  background: #fff
+  @media only screen and (min-width: 620px) 
+    padding: 10px
+
+  .text
+    padding: 20px 30px
+
+  @media only screen and (min-width: 620px) 
+
+    li > a
+      +clearfix
+
+    img
+      float: left
+      width: 50%
+
+    .text
+      float: right
+      width: 50%
+      padding: 10px 30px 0
+      +box-sizing(border-box)
+
+    h1, h2, p
+      text-align: left
+
+  @media only screen and (min-width: 750px) 
+
+    .text
+      padding-top: 50px
+
+
+///////////////////////////////////////////////////////////////////////////
+// email signup
+.email-signup
+  background: #000
+  padding: 20px 30px 30px
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 376px
+  margin: 0 0 -368px
+  +box-sizing(border-box)
+  color: $context-blue
+  +transition(margin .2s linear)
+  @media only screen and (min-width: 560px) 
+    margin: 0 0 -338px
+    height: auto
+
+  &.email-up
+    margin: 0
+
+  .inside-wrapper
+    max-width: 500px
+    margin: 0 auto 0
+
+  h1
+    color: $context-green
+
+  h2
+    font-size: 18px
+    line-height: 24px
+    @media only screen and (min-width: 560px) 
+      line-height: 33px
+      font-size: 30px
+
+  form
+    background: #222
+    padding: 20px
+    margin: 20px 0 0
+
+  label
+    color: #fff
+    width: 20%
+    display: block
+    float: left
+    font-size: 20px
+    line-height: 26px
+    padding-top: 5px
+
+  input[type="email"]
+    padding: 5px 8px
+    border: 1px solid #000
+    width: 80%
+    +box-sizing(border-box)
+
+    &:focus
+      border: 1px solid $context-green
+
+  input[type="submit"]
+    +box-sizing(border-box)
+    width: 100%
+    padding: 10px 0
+    border: none
+    background: $context-red
+    text-transform: uppercase
+    font-weight: bold
+    margin: 10px 0 0 0
+    color: black
+    +border-radius(5px)
+
+    &:hover
+      background: darken($context-red, 10%)
+
+    &:active
+      background: darken($context-red, 20%)
+
+.arrow-up
+  width: 0
+  height: 0
+  border-left: 15px solid transparent
+  border-right: 15px solid transparent
+  border-bottom: 15px solid black
+  position: relative
+  margin: -35px auto 10px
+  cursor: pointer
+
+  &.hot-arrow
+    border-bottom: 15px solid $context-red
+
+
+//.featured-events
+//
+//  li
+//    +transition(background .15s linear)
+//
+//  li:hover
+//    background: $context-red
+//    color: #000
+//
+//    a
+//      color: #000
+//
+//  li
+//    padding: 10px 10px 10px
+//    margin-top: 10px
+//    display: block
+//    +box-sizing(border-box)
+//
+//  h1, h2, p
+//    line-height: 16px
+//    font-weight: normal
+//    font-size: 12px
+//    font-family: sans-serif
+//
+//  h1
+//    font-weight: bold
+//
+//.event_1
+//  background: $context-blue
+//
+//.event_2
+//  background: #00b6cc
+//
+//.event_3
+//  background: #00bbbd
+//
+//.event_4
+//  background: #00c2ae
+//
+//.event_5
+//  background: #00c89e
+//
+//.event_6
+//  background: #00ce8e
+//
+//.event_7
+//  background: #00d480
+//
+//.event_8
+//  background: $context-green
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// articles
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+article
+  position: relative
+  z-index: 1
+
+  p, li
+    font-family: Helvetica,Arial,sans-serif
+    font-size: 14px
+    line-height: 23px
+
+  a
+    color: $context-red
+
+    &:hover
+      color: darken($context-red, 20%)
+
+  .pull-quote, h2
+    @extend h2
+    margin: 30px 50px
+
+.header-image
+  +background-size(cover)
+  height: 500px
+  width: 100%
+
+.boundary
+  margin: 0 auto 0
+  max-width: 900px
+  background: #fff
+  padding: 30px 0
+
+  hgroup, p, h2, h3
+    padding: 0 50px
+    margin: 0 0 20px
+
+  hgroup
+    padding-bottom: 20px
+    border-bottom: 1px solid $context-green
+    margin-bottom: 30px
+
+    h2
+      padding: 10px 0 0
+      margin-bottom: 5px
+
+    p
+      padding: 8px 0 0 0
+
+  li
+    margin: 0 50px 10px
+
+.first-boundary
+  padding-top: 0
+
+.boundary-first-header
+  height: 6px
+  width: 100%
+  +background-image(linear-gradient(left, $context-blue, $context-green))
+  margin-bottom: 30px
+
+.columns
+
+  img
+    padding: 0 0px 30px
+
+.middle-full-image
+  padding: 10px 0 30px
+
+.full-middle-image
+  +background-size(cover)
+
+.videoWrapper
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+  margin-bottom: 40px
+  margin-top: 30px
+
+object, embed, iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.venue
+  margin: 50px 50px 30px
+  +background-image(linear-gradient(top, $context-blue, $context-green))
+
+  .image
+    +box-sizing(border-box)
+    padding: 10px
+
+  hgroup
+    padding: 0 20px 20px
+    margin: 0
+    +box-sizing(border-box)
+    border: none
+
+  h1, h2, h3, h4
+    font-family: Helvetica,Arial,sans-serif
+    font-size: 14px
+    line-height: 23px
+    padding: 0
+    margin: 0
+    font-weight: normal
+
+  a
+    color: #fff
+    font-weight: bold
+    text-shadow: 0 1px 0 rgba(0,0,0,.8)
+
+    &:hover
+      color: $context-red
+      text-shadow: 0 1px 0 rgba(255,255,255,.5)
+
+.waiver
+  color: $context-red
+  font-weight: bold
+
+.info-square
+  border: 6px solid $context-green
+  margin: 20px 50px 0
+
+  p
+    padding: 10px 20px
+    margin: 0
+    font-weight: bold
+
+.across-4
+  +clearfix
+  margin: 20px auto 40px
+  padding: 0
+  max-width: 450px
+
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+    width: 50%
+    float: left
+
+    &:nth-child(1)
+      background: $context-blue
+
+    &:nth-child(2)
+      background: $context-blue-green
+
+    &:nth-child(3)
+      background: $context-green-blue
+
+    &:nth-child(4)
+      background: $context-green
+
+  p
+    margin: 0
+    padding: 10px 15px 15px
+    line-height: 19px
+
+
+////
+// celeste-article
+#celeste
+  background: #000
+
+  .header-image
+    background: url(../img/celeste-1_small.jpg) center top
+    height: 300px
+    @media only screen and (min-width: 650px)
+      background: url(../img/celeste-1.jpg) center top
+      height: 520px
+
+  .image-1
+    background: url(../img/celeste-5_small.jpg) center top
+    height: 280px
+    @media only screen and (min-width: 650px)
+      background: url(../img/celeste-5.jpg) center top
+      height: 726px
+
+// silence-under-the-bridge
+#silence-under-the-bridge
+  background: #ffa636
+
+  .header-image
+    background: url(../img/mural-4_small.jpg) no-repeat center #000
+    height: 400px
+    @media only screen and (min-width: 650px)
+      background: url(../img/mural-4.jpg) no-repeat center bottom #000
+      height: 700px
+
+  @media only screen and (min-width: 650px)
+    .first-boundary
+      margin-top: -300px
+
+  .image-1
+    background: url(../img/mural-2_small.jpg) center
+    height: 300px
+    @media only screen and (min-width: 650px)
+      background: url(../img/mural-2.jpg) center
+      height: 726px
+
+
+// marcel dzama chess
+#chess
+  background: url(../img/paven.png)
+
+  .header-image
+    background: url(../img/chess-2.jpg) center top
+    border-bottom: 5px solid #000
+    height: 300px
+    @media only screen and (min-width: 650px)
+      height: 500px
+
+@import helper
+
+// ==========================================================================
+// EXAMPLE Media Queries for Responsive Design.
+// Theses examples override the primary ('mobile first') styles.
+// Modify as content requires.
+// ========================================================================== */
+
+@media only screen and (min-width: 400px)
+
+  //give images in columns proper padding
+  .column-left-image, .column-right-image
+    max-width: 400px
+    margin: 0 auto
+
+@media only screen and (min-width: 520px)
+
+  // float the venue image
+  .venue
+    +clearfix
+  
+    .image
+      width: 50%
+      float: left
+      padding: 10px 0 10px 10px
+  
+    hgroup
+      width: 50%
+      float: right
+      padding: 20px
+
+@media only screen and (min-width: 620px) 
+  /* Style adjustments for viewports that meet the condition */
+
+
+
+  .featured-articles
+    +clearfix
+    padding: 10px
+
+    li
+      width: 33.3%
+      float: left
+
+    .middle > a
+
+  .featured-events
+    +clearfix
+
+    li
+      float: left
+      width: 12.5%
+      margin-top: 0
+
+@media only screen and (min-width: 650px)
+
+  // this floats all the columns
+  .columns
+    +clearfix
+  
+  .column-left, .column-right
+    width: 50%
+  
+  .column-right
+    float: right
+  
+  .column-left
+    float: left
+  
+  .column-right-image, .column-left-image
+    max-width: 50%
+    +box-sizing(border-box)
+  
+    img
+      margin: 0 0 10px
+      padding: 0
+  
+  .column-right-image
+    float: right
+    padding-right: 50px
+  
+  .column-left-image
+    float: left
+    text-align: right
+    padding-left: 50px
+
+
+  // this makes across-2s into across-4s
+  .across-4
+    max-width: 100%
+  
+    li
+      width: 25%
+
+  // make the top of each article hover over header image
+  .first-boundary
+    margin-top: -100px
+
+@media only screen and (min-width: 950px) 
+  /* Style adjustments for viewports that meet the condition */
+
+  .mobile-navicon
+    display: none
+    
+  .main-nav
+    z-index: 3
+    float: right
+    text-align: right
+    top: 20px
+    right: 20px
+    width: 40%
+
+    li
+      display: inline
+
+      a
+        display: inline
+        border: none
+        padding-right: 1px
+        font-size: 14px
+        color: #000
+        text-shadow: 0 1px 0 rgba(255,255,255,.5)
+
+        &:hover
+          background: none
+          color: #fff
+          text-shadow: 0 1px 0 rgba(0,0,0,.8)
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) 
+  /* Style adjustments for high resolution devices */
+
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ========================================================================== */
+
+@media print 
+  @import print

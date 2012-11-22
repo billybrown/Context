@@ -1,0 +1,28 @@
+---
+layout: nil
+title: Context
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>{{ title }}</title>
+ <link href="http://www.txetnoc.com/atom.xml" rel="self"/>
+ <link href="http://www.txetnoc.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://www.txetnoc.com/</id>
+ <author>
+   <name>Bill Brown</name>
+   <email>b@illbrown.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://www.txetnoc.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://www.txetnoc.com{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
