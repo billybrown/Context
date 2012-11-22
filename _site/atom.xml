@@ -4,7 +4,7 @@
  <title></title>
  <link href="http://www.txetnoc.com/atom.xml" rel="self"/>
  <link href="http://www.txetnoc.com/"/>
- <updated>2012-11-21T01:12:26-05:00</updated>
+ <updated>2012-11-21T21:15:55-05:00</updated>
  <id>http://www.txetnoc.com/</id>
  <author>
    <name>Bill Brown</name>
@@ -188,7 +188,7 @@
           
 
         &lt;section class=&quot;venue&quot;&gt;
-            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;../../../../img/massmoca.jpg&quot;/&gt;&lt;/div&gt;
+            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;http://0.0.0.0:4000/img/massmoca.jpg&quot;/&gt;&lt;/div&gt;
             &lt;hgroup&gt;
                 &lt;h1&gt;&lt;strong&gt;What: &lt;/strong&gt;Marcel Dzama's A Game of Chess in the exhibition, &quot;Oh, Canada&quot;&lt;/h1&gt;
                 &lt;h1&gt;&lt;strong&gt;Where: &lt;/strong&gt;Mass MoCA&lt;/h2&gt;
@@ -196,7 +196,7 @@
                 &lt;h1&gt;&lt;strong&gt;More Info: &lt;/strong&gt;&lt;a href=&quot;http://www.massmoca.org/event_details.php?id=663&quot;&gt;exhibition website&lt;/a&gt;&lt;/h3&gt;
             &lt;/hgroup&gt;
         &lt;/section&gt;
-                &lt;a class=&quot;footer-link&quot; href=&quot;/&quot;&gt;
+                &lt;a class=&quot;footer-link&quot; href=&quot;http://0.0.0.0:4000&quot;&gt;
             &lt;div&gt;&lt;/div&gt;
         &lt;/a&gt;
 
@@ -294,7 +294,7 @@
   
 
         &lt;section class=&quot;venue&quot;&gt;
-            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;../../../../img/mural-11.jpg&quot;/&gt;&lt;/div&gt;
+            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;http://0.0.0.0:4000/img/mural-11.jpg&quot;/&gt;&lt;/div&gt;
             &lt;hgroup&gt;
                 &lt;h1&gt;&lt;strong&gt;What: &lt;/strong&gt;North Street Soundwave Project&lt;/h1&gt;
                 &lt;h1&gt;&lt;strong&gt;Where: &lt;/strong&gt;North Street between King and Market in downtown Northampton, MA&lt;/h2&gt;
@@ -302,7 +302,7 @@
                 &lt;h1&gt;&lt;strong&gt;More Info: &lt;/strong&gt;&lt;a href=&quot;http://c3northampton.org/?p=879&quot;&gt;exhibition website&lt;/a&gt;&lt;/h3&gt;
             &lt;/hgroup&gt;
         &lt;/section&gt;
-        &lt;a class=&quot;footer-link&quot; href=&quot;/&quot;&gt;
+        &lt;a class=&quot;footer-link&quot; href=&quot;http://0.0.0.0:4000&quot;&gt;
             &lt;div&gt;&lt;/div&gt;
         &lt;/a&gt;
 
@@ -363,7 +363,7 @@
   
 
         &lt;section class=&quot;venue&quot;&gt;
-            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;../../../../img/umass.jpg&quot;/&gt;&lt;/div&gt;
+            &lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;http://0.0.0.0:4000/img/umass.jpg&quot;/&gt;&lt;/div&gt;
             &lt;hgroup&gt;
                 &lt;h1&gt;&lt;strong&gt;What: &lt;/strong&gt;Celeste Boursier-Mougenot Solo Show&lt;/h1&gt;
                 &lt;h1&gt;&lt;strong&gt;Where: &lt;/strong&gt;University Museum of Contemporary Art UMassAmherst Fine Art Center&lt;/h2&gt;
@@ -371,7 +371,7 @@
                 &lt;h1&gt;&lt;strong&gt;More Info: &lt;/strong&gt;&lt;a href=&quot;https://fac.umass.edu/UMCA/Online/&quot;&gt;exhibition website&lt;/a&gt;&lt;/h3&gt;
             &lt;/hgroup&gt;
         &lt;/section&gt;
-        &lt;a class=&quot;footer-link&quot; href=&quot;/&quot;&gt;
+        &lt;a class=&quot;footer-link&quot; href=&quot;http://0.0.0.0:4000&quot;&gt;
             &lt;div&gt;&lt;/div&gt;
         &lt;/a&gt;
 

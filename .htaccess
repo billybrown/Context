@@ -1,0 +1,10 @@
+AuthUserFile /home/<your_username>/webapps/<webapp_name>/.htpasswd
+AuthName EnterPassword
+AuthType Basic
+require valid-user
+
+# Hide files starting with a dot (.htaccess and .htpasswd in particular)
+<Files .*>
+order allow,deny
+deny from all
+</Files>
