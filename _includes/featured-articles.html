@@ -15,7 +15,7 @@
 					                <h1>{{ post.title }}</h1>
 					                <h2>{{ post.subtitle }}</h2>
 					            </hgroup>
-					            <p class="date"><time datetime="{{ post.time | date: '%Y-%m-%d' }}">{{ site.time | date: "%B %d %Y " }}</time></p>
+					            <p class="date"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d %Y " }}</time></p>
 					        </div>
 					    </a>
 					</li>
